@@ -2,14 +2,9 @@ import * as ActionTypes from './ActionTypes';
 import {DISHES} from '../shared/dishes';
 import {baseUrl} from '../shared/baseUrl';
 
-export const addComment = (dishId, rating, author, comment) => ({
+export const addComment = (comment) => ({
     type: ActionTypes.ADD_COMMENT,
-    payload: {
-        dishId: dishId,
-        rating: rating,
-        author: author,
-        comment: comment
-    }
+    payload: comment
 });
 
 export const postComment = (dishId, rating, author, comment) => (dispatch) => {
